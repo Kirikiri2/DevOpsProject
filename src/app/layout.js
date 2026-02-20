@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./styles/globals.css";
+import "./styles/nika.css";
 
 export default function RootLayout({ children }) {
   return (
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main>
-        {children}
+          {children}
         </main>
         <footer></footer>
       </body>
