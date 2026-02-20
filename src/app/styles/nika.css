@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'NauryzRedKeds';
+    src: url('/fonts/behance-66279ce7757fe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nauryz {
+    font-family: 'NauryzRedKeds', sans-serif;
+}
+
+h1 {
+    color: #241a22;
+    font-size: 40px;
+}
+
