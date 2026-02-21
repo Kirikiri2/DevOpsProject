@@ -4,7 +4,7 @@ import "./styles/nika.css";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body>
         <header>
           <nav className="flex gap-x-4 items-center m-4 p-2">
