@@ -19,7 +19,7 @@ export default function Star() {
         ${visible ? "opacity-100" : "opacity-0"}
       `}
         >
-            <svg width="70" height="70" viewBox="0 0 100 100">
+            <svg width="40" height="40" viewBox="0 0 100 100">
                 <polygon
                     points="
       50,0
