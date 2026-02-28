@@ -1,0 +1,147 @@
+/* 🔹 Подключение кастомного шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap');
+
+/* 🔹 CSS-переменные для удобного управления цветами */
+:root {
+    --burgundy-light: #f8e8ec;
+    --burgundy-main: #9b6b7a;
+    --burgundy-dark: #8b5a6b;
+    --burgundy-text: #7a6b6f;
+    --burgundy-muted: #a89499;
+    --bg-warm: #faf7f8;
+}
+
+/* 🔹 Базовые улучшения поверх Tailwind */
+.portfolio-container {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--burgundy-text);
+    line-height: 1.6;
+}
+
+/* 🔹 Рукописный акцент */
+.handwritten-intro,
+.hero-deco,
+.handwritten-text {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+
+/* 🔹 Плавная анимация blur-пятен */
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: translate(5px, -5px) scale(1.05);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.delay-1000 {
+    animation-delay: 1s;
+}
+
+/* 🔹 Улучшенные тени */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(122, 107, 111, 0.15);
+}
+
+/* 🔹 Hover-эффекты для карточек */
+.service-card,
+.content-card,
+.skill-tag {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover,
+.content-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(155, 107, 122, 0.2);
+}
+
+/* 🔹 Теги навыков */
+.skill-tag {
+    background: linear-gradient(135deg, #fff, var(--bg-warm));
+    border: 1px solid var(--burgundy-light);
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    color: var(--burgundy-text);
+    font-weight: 500;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: var(--burgundy-main);
+    color: white;
+    border-color: var(--burgundy-main);
+    transform: scale(1.05);
+}
+
+/* 🔹 Декоративная линия под заголовками */
+.deco-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--burgundy-main), transparent);
+    border-radius: 2px;
+    margin: 0.5rem 0 1.5rem;
+}
+
+/* 🔹 Ссылки и кнопки */
+a {
+    color: var(--burgundy-main);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--burgundy-dark);
+}
+
+/* 🔹 Адаптивность */
+@media (max-width: 768px) {
+    .text-6xl {
+        font-size: 3.5rem;
+    }
+
+    .text-8xl {
+        font-size: 4.5rem;
+    }
+
+    .hero-title span {
+        display: block;
+    }
+}
+
+/* 🔹 Доступность */
+a:focus,
+button:focus {
+    outline: 2px solid var(--burgundy-main);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* 🔹 Плавное появление секций */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
